@@ -1,4 +1,4 @@
-// Testes automáticos do repositório: README, imagens e apresentação.
+// Testes automáticos do repositório: README, imagens e documentação.
 // Rodam no GitHub Actions a cada push. Localmente: node --test .github/tests/*.test.js
 const test = require("node:test");
 const assert = require("node:assert");
@@ -26,13 +26,12 @@ test("README: links, imagens e âncoras apontam para o que existe", () => {
   }
 });
 
-test("a apresentação em PDF e a capa estão no repositório", () => {
+test("a documentação em PDF e a capa estão no repositório", () => {
   assert.ok(existe(".github/capa.jpg"), "faltando: .github/capa.jpg");
   const pdf = fs.readFileSync(path.join(raiz, "docs/PEEK_Hackathon_WECTI.pdf"));
   assert.strictEqual(pdf.subarray(0, 5).toString(), "%PDF-");
 });
 
-test("os 8 slides estão em imagem", () => {
-  const slides = fs.readdirSync(path.join(raiz, "imagens")).filter((n) => /^slide-\d-.+\.jpg$/.test(n));
-  assert.strictEqual(slides.length, 8, "slides encontrados: " + slides.join(", "));
+test("o diagrama da arquitetura está no repositório", () => {
+  assert.ok(existe("imagens/arquitetura.jpg"), "faltando: imagens/arquitetura.jpg");
 });
