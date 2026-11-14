@@ -6,7 +6,7 @@
 
 ### Controle operacional para quem vende em vários canais
 
-**Hackathon WECTI 2026** · UNICID · Equipe PEEK
+**Hackathon WECTI 2026** · Equipe PEEK · 2º semestre · UNICID 2026
 
 <sub>Dor 1: Estoque Inteligente & Omnichannel · Pitch de 10 minutos · Trabalho em equipe</sub>
 
